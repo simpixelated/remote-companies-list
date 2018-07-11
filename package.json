@@ -1,0 +1,26 @@
+{
+  "name": "remote-companies-list",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/react-fontawesome": "0.1.0-11",
+    "expect.js": "^0.3.1",
+    "node-crunchbase": "^1.0.0",
+    "node-linkedin": "^0.5.6",
+    "react": "^16.4.1",
+    "react-bootstrap-table-next": "^0.1.13",
+    "react-bootstrap-table2-filter": "^0.2.0",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "react-table": "^6.8.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -56,5 +56,7 @@ https://www.flexjobs.com/blog/post/top-companies-for-remote-jobs-run-by-women/
 
 8. integrate Glassdoor API https://www.glassdoor.com/developer/index.htm
 
+9. add data for https://github.com/poteto/hiring-without-whiteboards
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

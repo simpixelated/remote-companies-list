@@ -6332,6 +6332,20 @@
     "urlJobs": "https://resin.workable.com/"
   },
   {
+    "provider": "Legacy",
+    "name": "Respondent",
+    "twitter": "respondent_io",
+    "employees": "11-50",
+    "description": "Source research participants",
+    "url": "https://www.respondent.io/",
+    "hqCity": "New York",
+    "hqCountry": "USA",
+    "ceoName": "Jack Pratten",
+    "ceoTwitter": "jack_pratten",
+    "urlJobs": "https://angel.co/respondent-io/jobs",
+    "glassdoor": "https://www.glassdoor.com/Overview/Working-at-Respondent-EI_IE1752047.11,21.htm"
+  }, 
+  {
     "provider": "remoteok",
     "name": "retail-zipline",
     "twitter": "retailzipline",

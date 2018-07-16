@@ -2,6 +2,8 @@ This is a website (React) version of the [remotive.io spreadsheet of 600+ Startu
 
 ### Usage
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/simpixelated/remote-companies-list.svg)](https://greenkeeper.io/)
+
 First, install dependencies:
 ```
 npm install

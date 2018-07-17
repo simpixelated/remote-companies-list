@@ -1,11 +1,26 @@
 import React from 'react';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
-import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
+import filterFactory, { textFilter, selectFilter } from 'react-bootstrap-table2-filter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faSmile, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import _ from 'lodash';
 import companies from './companies.json';
+
+// creates a keyed object to use with react-bootstrap-table-next selectFilter
+const getSelectOptions = (collection, dataField) => {
+  return _.flow([
+    (property) => _.map(collection, property),
+    _.uniq,
+    _.sortBy,
+    (values) => _.reduce(values, (result, value, key) => {
+      result[value] = value;
+      return result;
+    }, {}),
+  ])(dataField);
+};
+const countryOptions = getSelectOptions(companies, 'hqCountry');
 
 const TwitterCell = ({ handle, avatar }) => (
   <MediaCell
@@ -60,11 +75,15 @@ const CompaniesList = () => {
   }, {
     text: "HQ (city)",
     dataField: "hqCity",
-    filter: textFilter()
+    filter: textFilter(),
   }, {
     text: "HQ (country)",
     dataField: "hqCountry",
-    filter: textFilter()
+    // filter: textFilter(),
+    formatter: cell => countryOptions[cell],
+    filter: selectFilter({
+      options: countryOptions
+    })
   }, {
     text: "CEO",
     dataField: "ceoTwitter",
